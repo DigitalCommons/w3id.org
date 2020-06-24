@@ -9,4 +9,4 @@ Some example URIs to test:
 * https://w3id.org/sea-lod/newcastle-mapjam/OuseburnFarm
 
 Contacts: 
-* Matt Wallis <matt@solidarityeconomy.coop>
+* Colm Massey <colm@solidarityeconomy.coop>
