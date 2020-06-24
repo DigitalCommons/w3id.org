@@ -20,13 +20,13 @@ RewriteCond %{HTTP_ACCEPT} !application/rdf+xml.*(text/html|application/xhtml+xm
 RewriteCond %{HTTP_ACCEPT} text/html [OR]
 RewriteCond %{HTTP_ACCEPT} application/xhtml+xml [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Mozilla/.*
-RewriteRule ^$ https://data1.solidarityeconomy.coop/ICA/index.html [R=303,L]
+RewriteRule ^$ https://dev.data.solidarityeconomy.coop/ICA/index.html [R=303,L]
 
 RewriteCond %{HTTP_ACCEPT} application/rdf+xml
-RewriteRule ^$ https://data1.solidarityeconomy.coop/ICA/index.rdf [R=303,L]
+RewriteRule ^$ https://dev.data.solidarityeconomy.coop/ICA/index.rdf [R=303,L]
 
 RewriteCond %{HTTP_ACCEPT} text/turtle
-RewriteRule ^$ https://data1.solidarityeconomy.coop/ICA/index.ttl [R=303,L]
+RewriteRule ^$ https://dev.data.solidarityeconomy.coop/ICA/index.ttl [R=303,L]
 
 # Redirect https://w3id.org/ica-youth-network/X to the appropriate file on data1.solidarityeconomy.coop
 # In this case, X will refer to a specific Coop.
@@ -35,13 +35,13 @@ RewriteCond %{HTTP_ACCEPT} !application/rdf+xml.*(text/html|application/xhtml+xm
 RewriteCond %{HTTP_ACCEPT} text/html [OR]
 RewriteCond %{HTTP_ACCEPT} application/xhtml+xml [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Mozilla/.*
-RewriteRule ^(.*)$ https://data1.solidarityeconomy.coop/ICA/$1.html [R=303,L]
+RewriteRule ^(.*)$ https://dev.data.solidarityeconomy.coop/ICA/$1.html [R=303,L]
 
 RewriteCond %{HTTP_ACCEPT} application/rdf+xml
-RewriteRule ^(.*)$ https://data1.solidarityeconomy.coop/ICA/$1.rdf [R=303,L]
+RewriteRule ^(.*)$ https://dev.data.solidarityeconomy.coop/ICA/$1.rdf [R=303,L]
 
 RewriteCond %{HTTP_ACCEPT} text/turtle
-RewriteRule ^(.*)$ https://data1.solidarityeconomy.coop/ICA/$1.ttl [R=303,L]
+RewriteRule ^(.*)$ https://dev.data.solidarityeconomy.coop/ICA/$1.ttl [R=303,L]
 
 # Default rule. Apparently, some older Linked Data applications assume this default (sigh):
-RewriteRule ^(.*)$ https://data1.solidarityeconomy.coop/ICA/$1.rdf [R=303,L]
+RewriteRule ^(.*)$ https://dev.data.solidarityeconomy.coop/ICA/$1.rdf [R=303,L]
